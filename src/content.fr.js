@@ -455,8 +455,8 @@ const fr = {
       message: 'À propos de votre projet',
       messagePh: 'Parlez-moi de votre entreprise et de l’audience que vous souhaitez atteindre...',
       submit: 'Envoyer la demande',
-      sent: 'Votre brouillon est prêt.',
-      sentText: 'Votre application e-mail devrait s’ouvrir avec le message prérempli — envoyez-le et je répondrai dans les 24 heures.',
+      sent: 'Merci !',
+      sentText: 'Votre message a bien été envoyé — je répondrai dans les 24 heures.',
       sendAnother: 'En écrire un autre',
     },
     steps: {

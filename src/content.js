@@ -464,8 +464,8 @@ const en = {
       message: 'About your project',
       messagePh: 'Tell me about your business and the audience you want to reach...',
       submit: 'Send request',
-      sent: 'Your draft is ready.',
-      sentText: 'Your email app should open with the message filled in — press send and I will reply within 24 hours.',
+      sent: 'Thank you!',
+      sentText: 'Your message has been sent — I will reply within 24 hours.',
       sendAnother: 'Write another',
     },
     steps: {

@@ -455,8 +455,8 @@ const es = {
       message: 'Sobre tu proyecto',
       messagePh: 'Cuéntame sobre tu negocio y la audiencia a la que quieres llegar...',
       submit: 'Enviar solicitud',
-      sent: 'Tu borrador está listo.',
-      sentText: 'Tu aplicación de correo debería abrir con el mensaje rellenado — presiona enviar y te responderé en un plazo de 24 horas.',
+      sent: '¡Gracias!',
+      sentText: 'Tu mensaje se ha enviado — te responderé en un plazo de 24 horas.',
       sendAnother: 'Escribir otro',
     },
     steps: {
