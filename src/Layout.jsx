@@ -27,6 +27,7 @@ function LangSwitch({ compact = false }) {
         <PlainLink
           key={item.code}
           href={localize(base, item.code)}
+          prefetch={false}
           className={item.code === lang ? 'is-active' : ''}
           hrefLang={item.code}
           lang={item.code}

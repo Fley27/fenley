@@ -33,12 +33,20 @@ function remember(response, locale) {
   return response
 }
 
+// Only stamp the preference cookie on real document navigations.
+// Background requests (RSC fetches, Next.js link prefetches) must never
+// overwrite an explicit language choice.
+function isDocument(request) {
+  return !request.headers.get('rsc')
+}
+
 export function proxy(request) {
   const { pathname } = request.nextUrl
 
   const pathLocale = localeFromPath(pathname)
   if (pathLocale) {
-    return remember(NextResponse.next(), pathLocale)
+    const response = NextResponse.next()
+    return isDocument(request) ? remember(response, pathLocale) : response
   }
 
   if (pathname === '/en' || pathname.startsWith('/en/')) {
@@ -56,7 +64,7 @@ export function proxy(request) {
   const url = request.nextUrl.clone()
   url.pathname = pathname === '/' ? `/${target}` : `/${target}${pathname}`
   const response = NextResponse.redirect(url)
-  if (!saved) remember(response, target)
+  if (!saved && isDocument(request)) remember(response, target)
   return response
 }
 
