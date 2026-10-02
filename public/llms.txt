@@ -1,0 +1,37 @@
+# Fenley Menelas
+
+> Independent web designer and developer building fast, multilingual websites and web apps in English, Spanish and French. Custom builds start at $1,000; the ongoing care membership is $50/month.
+
+Fenley Menelas is a software engineer based in Haiti, serving clients across the United States, Canada, the Dominican Republic and Haiti. Every project is AI-assisted and human-reviewed: Next.js and React front ends, WordPress and Shopify builds, technical SEO, accessibility (WCAG 2.2 AA), performance work and analytics. Sites can ship in three languages — English, Spanish and French — with translation built into the structure from the first draft rather than pasted on at the end.
+
+Typical reply time: within 24 hours, in English, Spanish or French.
+
+## Pages
+
+- [Home](https://fenleymenelas.com/): Positioning, languages served, starting price, selected capabilities
+- [Services & pricing](https://fenleymenelas.com/services): Six services, four-step process, $1,000 custom build, $50/month membership, full FAQ
+- [How I build](https://fenleymenelas.com/build): Build principles — speed, audience-first design, shared stakes, a foundation made to grow
+- [Skills](https://fenleymenelas.com/skills): Project management, CMS and e-commerce, custom applications, cloud infrastructure, AI
+- [About](https://fenleymenelas.com/about): Background, almost a decade of shipping web, mobile and desktop products
+- [Contact](https://fenleymenelas.com/contact): Project enquiry form, email, phone, WhatsApp, Upwork profile
+
+## Languages
+
+The whole site is available in three languages. English lives at the root URL; Spanish and French are path-prefixed. Every localized page declares its own `rel="canonical"` plus `hreflang` alternates for all three languages and `x-default`.
+
+- English (x-default): https://fenleymenelas.com
+- Español: https://fenleymenelas.com/es
+- Français: https://fenleymenelas.com/fr
+
+Localized equivalents exist for every page above, e.g. https://fenleymenelas.com/es/services and https://fenleymenelas.com/fr/services.
+
+## Contact
+
+- Email: hi@fenleymenelas.com
+- Phone / WhatsApp: +509 3166-4446 — https://wa.me/50931664446
+- Upwork profile: https://www.upwork.com/freelancers/~01cf968566f1af7018
+
+## Optional
+
+- [Sitemap](https://fenleymenelas.com/sitemap.xml): All 18 indexable URLs with `hreflang` alternates
+- [Robots](https://fenleymenelas.com/robots.txt): Explicitly allows GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, anthropic-ai, Google-Extended, CCBot, Googlebot and Bingbot

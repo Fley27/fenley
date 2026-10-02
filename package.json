@@ -1,0 +1,25 @@
+{
+  "name": "fenley-menelas-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "oxlint",
+    "verify:seo": "node seo-verify.mjs",
+    "og": "node og.mjs"
+  },
+  "dependencies": {
+    "next": "^16.3.8",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "oxlint": "^1.79.0",
+    "playwright": "^1.49.1"
+  }
+}
