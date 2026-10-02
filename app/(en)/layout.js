@@ -1,8 +1,8 @@
-import '../../src/site/styles/base.css'
-import '../../src/site/styles/chrome.css'
-import '../../src/site/styles/pages.css'
-import RootDocument from '../../src/site/RootDocument.jsx'
-import { rootMetadata } from '../../src/site/metadata.js'
+import '../../src/styles/base.css'
+import '../../src/styles/chrome.css'
+import '../../src/styles/pages.css'
+import RootDocument from '../../src/RootDocument.jsx'
+import { rootMetadata } from '../../src/metadata.js'
 
 export const metadata = rootMetadata('en')
 

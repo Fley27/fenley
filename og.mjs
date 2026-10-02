@@ -1,6 +1,6 @@
 import { mkdirSync } from 'node:fs'
 import { chromium } from 'playwright'
-import { content } from './src/site/content.js'
+import { content } from './src/content.js'
 
 const OUT = new URL('./public/', import.meta.url).pathname
 const SITE_URL = 'https://fenleymenelas.com'

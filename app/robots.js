@@ -1,4 +1,4 @@
-import { SITE_URL, absoluteUrl } from '../src/site/seo.js'
+import { SITE_URL, absoluteUrl } from '../src/seo.js'
 const AI_AGENTS = [
   'GPTBot',
   'OAI-SearchBot',

@@ -1,5 +1,5 @@
-import About from '../../../src/site/pages/About.jsx'
-import { pageMetadata } from '../../../src/site/metadata.js'
+import About from '../../../src/views/About.jsx'
+import { pageMetadata } from '../../../src/metadata.js'
 
 export const metadata = pageMetadata('en', 'about', '/about')
 

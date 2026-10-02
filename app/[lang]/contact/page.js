@@ -1,5 +1,5 @@
-import Contact from '../../../src/site/pages/Contact.jsx'
-import { pageMetadata } from '../../../src/site/metadata.js'
+import Contact from '../../../src/views/Contact.jsx'
+import { pageMetadata } from '../../../src/metadata.js'
 
 export async function generateMetadata({ params }) {
   const { lang } = await params

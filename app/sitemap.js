@@ -1,4 +1,4 @@
-import { LOCALES, ROUTES, absoluteUrl, hreflangAlternates, localize } from '../src/site/seo.js'
+import { LOCALES, ROUTES, absoluteUrl, hreflangAlternates, localize } from '../src/seo.js'
 
 const CHANGE_FREQUENCY = {
   '/': 'weekly',

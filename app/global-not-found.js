@@ -1,8 +1,8 @@
-import '../src/site/styles/base.css'
-import '../src/site/styles/chrome.css'
-import '../src/site/styles/pages.css'
+import '../src/styles/base.css'
+import '../src/styles/chrome.css'
+import '../src/styles/pages.css'
 import Link from 'next/link'
-import { fontVariables } from '../src/site/fonts.js'
+import { fontVariables } from '../src/fonts.js'
 
 export const metadata = {
   title: '404 — Page not found | Fenley Menelas',

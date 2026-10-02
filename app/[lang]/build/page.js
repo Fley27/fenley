@@ -1,5 +1,5 @@
-import Build from '../../../src/site/pages/Build.jsx'
-import { pageMetadata } from '../../../src/site/metadata.js'
+import Build from '../../../src/views/Build.jsx'
+import { pageMetadata } from '../../../src/metadata.js'
 
 export async function generateMetadata({ params }) {
   const { lang } = await params

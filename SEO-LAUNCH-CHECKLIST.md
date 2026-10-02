@@ -13,7 +13,7 @@ be done once, at launch.
 - [x] Root layouts split by locale: `app/(en)/layout.js` (`<html lang="en">`) and `app/[lang]/layout.js`
       (`generateStaticParams` → `es`, `fr`, `dynamicParams = false`). The old catch-all
       `app/[...slug]` that redirected 404s to `/` is deleted — unknown URLs now return a real 404.
-- [x] Every page exports complete metadata via `src/site/metadata.js` → `pageMetadata(lang, key, path)`:
+- [x] Every page exports complete metadata via `src/metadata.js` → `pageMetadata(lang, key, path)`:
       unique `<title>`, meta description, keywords, `robots`, full `openGraph`, `twitter`, canonical and
       `alternates.languages` (`en`, `es`, `fr`, `x-default`).
 - [x] `hreflang` alternates are emitted on all 18 indexable URLs; `x-default` points at English.
@@ -27,18 +27,18 @@ be done once, at launch.
       unmatched URLs in **any** tree return HTTP 404 with the site theme, navigation and a `noindex`
       robots meta. If you upgrade Next, re-check that flag is still supported (build prints it under
       "Experiments").
-- [x] Structured data (`src/site/jsonld.js`), rendered server-side in the layout:
+- [x] Structured data (`src/jsonld.js`), rendered server-side in the layout:
       `Person`, `WebSite`, `Organization`, `ContactPoint` sitewide; `ProfessionalService` +
       `Offer` (pricing) + `FAQPage` on the services pages — in all three languages.
 - [x] Language switching is real navigation (`<a href>` links with `hreflang`/`lang`), not a client-side
       state toggle — crawlers and AI bots discover the localized URLs from the DOM alone.
-- [x] Internal links are locale-aware (`src/site/router.jsx` → `localize()`), so `/es` never links
+- [x] Internal links are locale-aware (`src/router.jsx` → `localize()`), so `/es` never links
       back to an English page by accident.
 - [x] No-JS safety: `.reveal` content is only hidden when `html.js` is set by an inline script, so
       text is visible without JavaScript. FAQ answers are in the HTML (no `hidden` attribute) and
       animated with `grid-template-rows`, with correct `aria-expanded` / `aria-hidden`.
 - [x] Client-side `localStorage` / `navigator.language` language sniffing removed — the URL is the
-      single source of truth (`src/site/i18n.jsx`).
+      single source of truth (`src/i18n.jsx`).
 - [x] Fonts self-hosted with `next/font/google` (`Space Grotesk`, `Manrope`, `DM Mono`) — no request
       to `fonts.googleapis.com`, `@font-face` preloaded.
 - [x] Open Graph images generated per language: `/og.png`, `/og.es.png`, `/og.fr.png` (1200×630,
@@ -47,7 +47,7 @@ be done once, at launch.
 - [x] `public/llms.txt` — plain-text site map written for LLM crawlers: what the business does,
       pricing, page list, language/URL scheme, contact details.
 - [x] `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` is read at build time into `verification.google`
-      (see `src/site/metadata.js`) — set it in Netlify instead of hard-coding a code.
+      (see `src/metadata.js`) — set it in Netlify instead of hard-coding a code.
 
 ## 2. Netlify setup
 
@@ -95,17 +95,17 @@ be done once, at launch.
       - Dev.to / Medium / Hashnode articles about the multilingual build
       - Haitian and LATAM developer directories, local business directories
       - A testimonial or directory listing from each served market (US, CA, DO, HT)
-- [ ] Add the remaining social profiles to `sameAs` in `src/site/jsonld.js` (currently only the Upwork
+- [ ] Add the remaining social profiles to `sameAs` in `src/jsonld.js` (currently only the Upwork
       profile — replace the placeholder with the real LinkedIn/GitHub/Instagram URLs).
 
 ## 6. Content / on-page
 
 - [ ] Decide whether `/work` should become a real indexed page. It exists as a component
-      (`src/site/pages/Work.jsx`) but is not routed (`SHOW_PROJECTS = false`). If enabled, add it to
-      `ROUTES` in `src/site/seo.js` and it will automatically appear in the sitemap and metadata.
+      (`src/pages/Work.jsx`) but is not routed (`SHOW_PROJECTS = false`). If enabled, add it to
+      `ROUTES` in `src/seo.js` and it will automatically appear in the sitemap and metadata.
 - [ ] Add a genuine testimonial/case study once a client agrees — `FAQPage` + real reviews are the
       fastest way into AI answers.
-- [ ] Check every translated string reads naturally in `src/site/content.es.js` / `content.fr.js`
+- [ ] Check every translated string reads naturally in `src/content.es.js` / `content.fr.js`
       (AI-drafted copy with human review — do one native-speaker pass).
 
 ## 7. Performance / a11y (affects ranking)

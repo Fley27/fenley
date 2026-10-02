@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { DEFAULT_LOCALE, LOCALES } from './src/site/seo.js'
+import { DEFAULT_LOCALE, LOCALES } from './src/seo.js'
 
 const COOKIE = 'fenley-lang'
 const MAX_AGE = 60 * 60 * 24 * 365

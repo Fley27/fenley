@@ -1,10 +1,10 @@
-import '../../src/site/styles/base.css'
-import '../../src/site/styles/chrome.css'
-import '../../src/site/styles/pages.css'
+import '../../src/styles/base.css'
+import '../../src/styles/chrome.css'
+import '../../src/styles/pages.css'
 import { notFound } from 'next/navigation'
-import RootDocument from '../../src/site/RootDocument.jsx'
-import { rootMetadata } from '../../src/site/metadata.js'
-import { LOCALES, DEFAULT_LOCALE } from '../../src/site/seo.js'
+import RootDocument from '../../src/RootDocument.jsx'
+import { rootMetadata } from '../../src/metadata.js'
+import { LOCALES, DEFAULT_LOCALE } from '../../src/seo.js'
 
 export const dynamicParams = false
 
