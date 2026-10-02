@@ -1,0 +1,10 @@
+import { chromium } from 'playwright'
+const b = await chromium.launch()
+const p = await b.newPage({ viewport: { width: 1440, height: 1000 } })
+await p.goto('http://localhost:3000/about?v=' + Date.now(), { waitUntil: 'networkidle' })
+await p.waitForTimeout(1200)
+const src = await p.evaluate(() => document.querySelector('.portrait-img')?.getAttribute('src'))
+console.log('served src:', src)
+await (await p.$('.about-portrait')).screenshot({ path: '/tmp/dust-verify/orig-fade-1.png' })
+await p.screenshot({ path: '/tmp/dust-verify/orig-fade-full-1.png' })
+await b.close()
