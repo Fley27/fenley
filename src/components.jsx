@@ -3,18 +3,14 @@ import { useI18n } from './useI18n.js'
 
 function BrandMark() {
   return (
-    <svg className="brand-mark" viewBox="0 0 44 44" width="28" height="28" aria-hidden="true">
-      <defs>
-        <linearGradient id="fm-grad" x1="9" y1="6" x2="36" y2="38" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#6EE7F9" />
-          <stop offset="1" stopColor="#8B7CFF" />
-        </linearGradient>
-      </defs>
-      <g fill="url(#fm-grad)">
-        <path d="M6.35 34.72L2.5 34.72L2.5 9.28L18.82 9.28L18.82 12.88L6.35 12.88L6.35 20.66L16.82 20.66L16.82 24.04L6.35 24.04L6.35 34.72" />
-        <path d="M26.49 34.72L22.82 34.72L22.82 9.28L26.89 9.28L32.16 20.76L37.43 9.28L41.5 9.28L41.5 34.72L37.83 34.72L37.83 16.62L33.69 25.71L30.63 25.71L26.49 16.66L26.49 34.72" />
-      </g>
-    </svg>
+    <img
+      className="brand-mark"
+      src="/avatar.jpg"
+      alt=""
+      width="38"
+      height="38"
+      aria-hidden="true"
+    />
   )
 }
 
