@@ -2,7 +2,10 @@ import '../src/styles/base.css'
 import '../src/styles/chrome.css'
 import '../src/styles/pages.css'
 import Link from 'next/link'
+import Script from 'next/script'
 import { fontVariables } from '../src/fonts.js'
+
+const GA_ID = 'G-RCRG7FPQPW'
 
 export const metadata = {
   title: '404 — Page not found | Fenley Menelas',
@@ -14,6 +17,17 @@ export default function GlobalNotFound() {
   return (
     <html lang="en" className={fontVariables}>
       <body>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script
+          id="gtag-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${GA_ID}');`,
+          }}
+        />
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <div className="site">
           <header className="nav-wrap">
