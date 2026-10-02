@@ -54,7 +54,11 @@ async function httpChecks() {
     }
   }
 
-  for (const path of ['/nope', '/en', '/de', '/es/nope', '/services/x', '/xyz/abc', '/es/services/deep']) {
+  const enRedirect = await fetch(BASE + '/en', { redirect: 'manual' })
+  check(enRedirect.status === 307 && new URL(enRedirect.headers.get('location'), BASE).pathname === '/',
+    'en /en redirects to /', `status ${enRedirect.status} → ${enRedirect.headers.get('location')}`)
+
+  for (const path of ['/nope', '/de', '/es/nope', '/services/x', '/xyz/abc', '/es/services/deep']) {
     const res = await fetch(BASE + path)
     const html = await res.text()
     check(res.status === 404, `404 ${path}`, String(res.status))

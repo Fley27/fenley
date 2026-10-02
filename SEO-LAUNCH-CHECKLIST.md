@@ -3,7 +3,7 @@
 Domain: `https://fenleymenelas.com` · Host: Netlify · Languages: `en` (root), `es` (`/es`), `fr` (`/fr`)
 
 Everything below that says **[DONE]** is already implemented in this repo and verified by
-`node seo-verify.mjs` (run against `npm run start`). Everything else is manual and only needs to
+`node scripts/seo-verify.mjs` (run against `npm run start`). Everything else is manual and only needs to
 be done once, at launch.
 
 ---
@@ -56,8 +56,8 @@ be done once, at launch.
 - [ ] Build command `npm run build`, publish directory `.next` handled by the Netlify Next.js runtime
       (or `@netlify/plugin-nextjs`). Set `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` as an env var.
 - [ ] Confirm HTTPS is active and HSTS is enabled on both hosts.
-- [ ] Confirm the deployed site returns the same results as `node seo-verify.mjs`:
-      run `BASE=https://fenleymenelas.com node seo-verify.mjs`.
+- [ ] Confirm the deployed site returns the same results as `node scripts/seo-verify.mjs`:
+      run `BASE=https://fenleymenelas.com node scripts/seo-verify.mjs`.
 
 ## 3. Google Search Console
 
@@ -120,7 +120,7 @@ be done once, at launch.
 npm run lint
 npm run build
 npm run start &
-BASE=http://localhost:3111 node seo-verify.mjs
+BASE=http://localhost:3111 node scripts/seo-verify.mjs
 ```
 
 Regenerate social images after a copy change:

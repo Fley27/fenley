@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "oxlint",
-    "verify:seo": "node seo-verify.mjs",
+    "verify:seo": "node scripts/seo-verify.mjs",
     "og": "node og.mjs"
   },
   "dependencies": {
