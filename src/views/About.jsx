@@ -18,7 +18,18 @@ export default function About() {
 
   return (
     <>
-      <PageHero kicker={page.hero.kicker} title1={page.hero.title1} title2={page.hero.title2} lead={page.hero.lead} />
+      <PageHero
+        kicker={page.hero.kicker}
+        title1={page.hero.title1}
+        title2={page.hero.title2}
+        lead={page.hero.lead}
+        className="page-hero-about"
+        backdrop={
+          <div className="hero-persona" aria-hidden="true">
+            <img className="hero-persona-img" src="/portrait-cutout.webp" alt="" width="705" height="940" />
+          </div>
+        }
+      />
 
       <section className="section container">
         <div className="about-grid">
