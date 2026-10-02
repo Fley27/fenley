@@ -151,11 +151,11 @@ export default function Contact() {
             </a>
             <a
               className="direct-line"
-              href="https://www.upwork.com/freelancers/~01cf968566f1af7018"
+              href="https://www.linkedin.com/in/fenley-jude-viky-menelas/"
               target="_blank"
               rel="noreferrer"
             >
-              {page.direct.upwork} ↗
+              {page.direct.linkedin} ↗
             </a>
             <p className="direct-meta">
               {page.direct.response} · {page.direct.location}

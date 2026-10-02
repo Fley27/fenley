@@ -89,14 +89,14 @@ be done once, at launch.
       already allowed).
 - [ ] Get at least 3–5 **independent** third-party mentions with a link (this is what actually drives
       LLM citation — models weight sources they saw during training):
-      - Upwork profile + case study linking to the domain
+      - LinkedIn profile "website" field + articles linking to the domain
       - GitHub profile / repo README linking to the domain
       - LinkedIn profile "website" field
       - Dev.to / Medium / Hashnode articles about the multilingual build
       - Haitian and LATAM developer directories, local business directories
       - A testimonial or directory listing from each served market (US, CA, DO, HT)
-- [ ] Add the remaining social profiles to `sameAs` in `src/jsonld.js` (currently only the Upwork
-      profile — replace the placeholder with the real LinkedIn/GitHub/Instagram URLs).
+- [ ] Add the remaining social profiles to `sameAs` in `src/jsonld.js` (currently only the LinkedIn
+      profile — add the real GitHub/Instagram URLs when they exist).
 
 ## 6. Content / on-page
 

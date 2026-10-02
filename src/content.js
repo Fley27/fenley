@@ -483,7 +483,7 @@ const en = {
       response: 'Usually replies within 24 hours',
       location: 'Haiti (EST) · Working worldwide',
       whatsapp: 'WhatsApp',
-      upwork: 'Upwork profile',
+      linkedin: 'LinkedIn profile',
       email: 'Email',
     },
   },

@@ -4,7 +4,7 @@ import { SITE_NAME, SITE_URL, absoluteUrl } from './seo.js'
 export const PERSON_ID = `${SITE_URL}/#person`
 export const WEBSITE_ID = `${SITE_URL}/#website`
 
-const SAME_AS = ['https://www.upwork.com/freelancers/~01cf968566f1af7018']
+const SAME_AS = ['https://www.linkedin.com/in/fenley-jude-viky-menelas/']
 
 export function personSchema(lang) {
   const meta = content[lang] ? content[lang].meta.home : content.en.meta.home

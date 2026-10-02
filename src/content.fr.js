@@ -474,7 +474,7 @@ const fr = {
       response: 'Réponse généralement sous 24 heures',
       location: 'Haïti (EST) · Travail dans le monde entier',
       whatsapp: 'WhatsApp',
-      upwork: 'Profil Upwork',
+      linkedin: 'Profil LinkedIn',
       email: 'Email',
     },
   },

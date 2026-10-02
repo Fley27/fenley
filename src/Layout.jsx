@@ -134,8 +134,8 @@ function Footer() {
             <a href="https://wa.me/50931664446" target="_blank" rel="noreferrer">
               WhatsApp
             </a>
-            <a href="https://www.upwork.com/freelancers/~01cf968566f1af7018" target="_blank" rel="noreferrer">
-              Upwork
+            <a href="https://www.linkedin.com/in/fenley-jude-viky-menelas/" target="_blank" rel="noreferrer">
+              LinkedIn
             </a>
           </div>
         </div>

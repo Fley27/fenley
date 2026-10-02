@@ -474,7 +474,7 @@ const es = {
       response: 'Suelo responder en 24 horas',
       location: 'Haití (EST) · Trabajo en todo el mundo',
       whatsapp: 'WhatsApp',
-      upwork: 'Perfil de Upwork',
+      linkedin: 'Perfil de LinkedIn',
       email: 'Correo electrónico',
     },
   },

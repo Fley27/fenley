@@ -13,7 +13,7 @@ Typical reply time: within 24 hours, in English, Spanish or French.
 - [How I build](https://fenleymenelas.com/build): Build principles — speed, audience-first design, shared stakes, a foundation made to grow
 - [Skills](https://fenleymenelas.com/skills): Project management, CMS and e-commerce, custom applications, cloud infrastructure, AI
 - [About](https://fenleymenelas.com/about): Background, almost a decade of shipping web, mobile and desktop products
-- [Contact](https://fenleymenelas.com/contact): Project enquiry form, email, phone, WhatsApp, Upwork profile
+- [Contact](https://fenleymenelas.com/contact): Project enquiry form, email, phone, WhatsApp, LinkedIn profile
 
 ## Languages
 
@@ -29,7 +29,7 @@ Localized equivalents exist for every page above, e.g. https://fenleymenelas.com
 
 - Email: hi@fenleymenelas.com
 - Phone / WhatsApp: +509 3166-4446 — https://wa.me/50931664446
-- Upwork profile: https://www.upwork.com/freelancers/~01cf968566f1af7018
+- LinkedIn profile: https://www.linkedin.com/in/fenley-jude-viky-menelas/
 
 ## Optional
 
