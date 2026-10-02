@@ -1,9 +1,10 @@
-import { mkdirSync } from 'node:fs'
+import { mkdirSync, readFileSync } from 'node:fs'
 import { chromium } from 'playwright'
 import { content } from './src/content.js'
 
 const OUT = new URL('./public/', import.meta.url).pathname
 const SITE_URL = 'https://fenleymenelas.com'
+const AVATAR_B64 = readFileSync(new URL('./public/avatar.jpg', import.meta.url)).toString('base64')
 
 const MONOGRAM_PATHS = `<g transform="translate(22 22) scale(0.9) translate(-22 -22)" fill="url(#g)">
   <path d="M6.35 34.72L2.5 34.72L2.5 9.28L18.82 9.28L18.82 12.88L6.35 12.88L6.35 20.66L16.82 20.66L16.82 24.04L6.35 24.04L6.35 34.72"/>
@@ -131,18 +132,9 @@ function ogDocument(lang) {
 function touchIconDocument() {
   return `<!doctype html><html><head><meta charset="utf-8" /><style>
   * { margin: 0; padding: 0; }
-  html, body { width: 180px; height: 180px; overflow: hidden; }
+  html, body { width: 180px; height: 180px; overflow: hidden; background: #05060a; }
   </style></head><body>
-  <svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
-    <rect width="180" height="180" fill="#05060a"/>
-    <defs><linearGradient id="g" x1="40" y1="34" x2="140" y2="146" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#6EE7F9"/><stop offset="1" stop-color="#8B7CFF"/>
-    </linearGradient></defs>
-    <g transform="translate(90 90) scale(2.7) translate(-22 -22)" fill="url(#g)">
-      <path d="M6.35 34.72L2.5 34.72L2.5 9.28L18.82 9.28L18.82 12.88L6.35 12.88L6.35 20.66L16.82 20.66L16.82 24.04L6.35 24.04L6.35 34.72"/>
-      <path d="M26.49 34.72L22.82 34.72L22.82 9.28L26.89 9.28L32.16 20.76L37.43 9.28L41.5 9.28L41.5 34.72L37.83 34.72L37.83 16.62L33.69 25.71L30.63 25.71L26.49 16.66L26.49 34.72"/>
-    </g>
-  </svg>
+  <img src="data:image/jpeg;base64,${AVATAR_B64}" width="180" height="180" alt="" />
   </body></html>`
 }
 

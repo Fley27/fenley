@@ -113,7 +113,13 @@ export function rootMetadata(lang) {
       description: meta.desc,
       images: [{ url: image, alt: meta.title }],
     },
-    icons: { icon: '/favicon.svg', apple: '/apple-touch-icon.png' },
+    icons: {
+      icon: [
+        { url: '/favicon.svg', type: 'image/svg+xml' },
+        { url: '/favicon.png', sizes: '48x48', type: 'image/png' },
+      ],
+      apple: '/apple-touch-icon.png',
+    },
     robots: { index: true, follow: true },
     ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
       ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
