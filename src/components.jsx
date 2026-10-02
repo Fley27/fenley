@@ -27,11 +27,10 @@ export function BrandLink() {
   )
 }
 
-export function PageHero({ kicker, title1, title2, lead, className, backdrop, children }) {
+export function PageHero({ kicker, title1, title2, lead, children }) {
   return (
-    <section className={className ? `page-hero ${className}` : 'page-hero'}>
+    <section className="page-hero">
       <div className="glow glow-hero" aria-hidden="true" />
-      {backdrop}
       <div className="container">
         <p className="kicker reveal">{kicker}</p>
         <h1 className="display reveal" data-dust-clear="">
