@@ -765,29 +765,130 @@
 }
 
 .about-portrait {
+  position: relative;
   margin: 0 0 34px;
 }
 
-.about-portrait .portrait-img,
-.about-portrait .portrait-ph {
+.portrait-stage {
+  position: relative;
+  width: min(430px, 100%);
+}
+
+.portrait-glow {
+  position: absolute;
+  inset: -6% -14% 4%;
+  background:
+    radial-gradient(56% 48% at 50% 34%, rgba(139, 124, 255, 0.3), transparent 72%),
+    radial-gradient(38% 32% at 64% 60%, rgba(110, 231, 249, 0.13), transparent 70%);
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.about-portrait .portrait-img {
+  position: relative;
   display: block;
-  width: min(352px, 100%);
-  aspect-ratio: 4 / 5;
-  border-radius: 24px;
-  border: 1px solid var(--line);
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 99%);
+  mask-image: linear-gradient(to bottom, #000 82%, transparent 99%);
 }
 
 .about-portrait .portrait-ph {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  aspect-ratio: 705 / 940;
+  border-radius: 28px;
+  border: 1px solid var(--line);
   background: linear-gradient(165deg, #141a29 0%, #0a0d16 70%);
   font-family: var(--display);
   font-size: clamp(64px, 9vw, 92px);
   font-weight: 600;
   letter-spacing: -0.05em;
   color: var(--dim);
+}
+
+.portrait-chip {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(7, 9, 14, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.82);
+  animation: chip-float 6s ease-in-out infinite;
+}
+
+.portrait-chip svg {
+  width: 20px;
+  height: 20px;
+}
+
+.pc-1 {
+  top: 7%;
+  left: -5%;
+}
+
+.pc-2 {
+  top: 33%;
+  right: -4%;
+  width: 46px;
+  height: 46px;
+  animation-delay: -2s;
+}
+
+.pc-2 svg {
+  width: 17px;
+  height: 17px;
+}
+
+.pc-3 {
+  bottom: 24%;
+  left: -7%;
+  animation-delay: -4s;
+}
+
+@keyframes chip-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait-chip {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .portrait-chip {
+    width: 44px;
+    height: 44px;
+  }
+
+  .portrait-chip svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .pc-2 {
+    width: 38px;
+    height: 38px;
+  }
+
+  .pc-2 svg {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 .about-portrait figcaption {

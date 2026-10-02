@@ -74,6 +74,7 @@ async function httpChecks() {
     '/og.fr.png',
     '/apple-touch-icon.png',
     '/portrait.jpg',
+    '/portrait-cutout.webp',
   ]) {
     const res = await fetch(BASE + path)
     check(res.status === 200, `asset ${path}`, `${res.status} ${res.headers.get('content-type')}`)

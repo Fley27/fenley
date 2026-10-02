@@ -24,21 +24,41 @@ export default function About() {
         <div className="about-grid">
           <div className="about-story reveal">
             <figure className="about-portrait">
-              {hasPhoto ? (
-                <img
-                  ref={imgRef}
-                  className="portrait-img"
-                  src="/portrait.jpg"
-                  alt={page.portrait.alt}
-                  width="480"
-                  height="600"
-                  onError={() => setHasPhoto(false)}
-                />
-              ) : (
-                <div className="portrait-ph" aria-hidden="true">
-                  FM
-                </div>
-              )}
+              <div className="portrait-stage">
+                <span className="portrait-glow" aria-hidden="true" />
+                {hasPhoto ? (
+                  <img
+                    ref={imgRef}
+                    className="portrait-img"
+                    src="/portrait-cutout.webp"
+                    alt={page.portrait.alt}
+                    width="705"
+                    height="940"
+                    onError={() => setHasPhoto(false)}
+                  />
+                ) : (
+                  <div className="portrait-ph" aria-hidden="true">
+                    FM
+                  </div>
+                )}
+                <span className="portrait-chip pc-1" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5.5 4 2 8l3.5 4M10.5 4 14 8l-3.5 4" />
+                  </svg>
+                </span>
+                <span className="portrait-chip pc-2" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 1.5 9.4 5.6 13.5 7 9.4 8.4 8 12.5 6.6 8.4 2.5 7l4.1-1.4z" />
+                    <path d="M12.8 10.6l.6 1.7 1.7.6-1.7.6-.6 1.7-.6-1.7-1.7-.6 1.7-.6z" />
+                  </svg>
+                </span>
+                <span className="portrait-chip pc-3" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                    <rect x="2" y="2.5" width="12" height="11" rx="2" />
+                    <path d="M2 6h12M6.5 6v7.5" />
+                  </svg>
+                </span>
+              </div>
               <figcaption>
                 <strong>{page.portrait.name}</strong>
                 <span>{page.portrait.role}</span>

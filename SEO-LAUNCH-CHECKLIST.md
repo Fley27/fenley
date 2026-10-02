@@ -43,7 +43,8 @@ be done once, at launch.
       to `fonts.googleapis.com`, `@font-face` preloaded.
 - [x] Open Graph images generated per language: `/og.png`, `/og.es.png`, `/og.fr.png` (1200×630,
       regenerate with `node og.mjs`). `apple-touch-icon.png` (180×180) also generated.
-- [x] `public/portrait.jpg` compressed 645 KB → 127 KB (705×940) for the About page.
+- [x] `public/portrait.jpg` compressed 645 KB → 127 KB (705×940) for the About page; the About page
+      itself renders `public/portrait-cutout.webp` (53 KB, background removed) as a blend-in cut-out.
 - [x] `public/llms.txt` — plain-text site map written for LLM crawlers: what the business does,
       pricing, page list, language/URL scheme, contact details.
 - [x] `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` is read at build time into `verification.google`
