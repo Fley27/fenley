@@ -6,7 +6,7 @@ import { fontVariables } from './fonts.js'
 
 export default function RootDocument({ lang, children }) {
   return (
-    <html lang={lang} className={fontVariables}>
+    <html lang={lang} className={fontVariables} suppressHydrationWarning>
       <body>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <JsonLd data={siteJsonLd(lang)} />
