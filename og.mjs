@@ -1,10 +1,10 @@
-import { mkdirSync, readFileSync } from 'node:fs'
+import { mkdirSync } from 'node:fs'
 import { chromium } from 'playwright'
+import sharp from 'sharp'
 import { content } from './src/content.js'
 
 const OUT = new URL('./public/', import.meta.url).pathname
 const SITE_URL = 'https://fenleymenelas.com'
-const AVATAR_B64 = readFileSync(new URL('./public/avatar.jpg', import.meta.url)).toString('base64')
 
 const MONOGRAM_PATHS = `<g transform="translate(22 22) scale(0.9) translate(-22 -22)" fill="url(#g)">
   <path d="M6.35 34.72L2.5 34.72L2.5 9.28L18.82 9.28L18.82 12.88L6.35 12.88L6.35 20.66L16.82 20.66L16.82 24.04L6.35 24.04L6.35 34.72"/>
@@ -129,15 +129,6 @@ function ogDocument(lang) {
 </html>`
 }
 
-function touchIconDocument() {
-  return `<!doctype html><html><head><meta charset="utf-8" /><style>
-  * { margin: 0; padding: 0; }
-  html, body { width: 180px; height: 180px; overflow: hidden; background: #05060a; }
-  </style></head><body>
-  <img src="data:image/jpeg;base64,${AVATAR_B64}" width="180" height="180" alt="" />
-  </body></html>`
-}
-
 const browser = await chromium.launch()
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 })
 
@@ -152,10 +143,12 @@ for (const lang of ['en', 'es', 'fr']) {
   console.log('wrote', file)
 }
 
-await page.setViewportSize({ width: 180, height: 180 })
-await page.setContent(touchIconDocument(), { waitUntil: 'load' })
-await page.screenshot({ path: `${OUT}apple-touch-icon.png` })
-console.log('wrote apple-touch-icon.png')
-
 await browser.close()
+
+await sharp(new URL('./public/portrait.jpg', import.meta.url))
+  .extract({ left: 140, top: 106, width: 450, height: 450 })
+  .resize(180, 180)
+  .png()
+  .toFile(`${OUT}apple-touch-icon.png`)
+console.log('wrote apple-touch-icon.png')
 console.log('done — site url', SITE_URL)
