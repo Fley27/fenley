@@ -29,13 +29,14 @@ export default function RootDocument({ lang, children }) {
       <body>
         <script dangerouslySetInnerHTML={{ __html: GA_SNIPPET }} />
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <JsonLd data={siteJsonLd(lang)} />
         <LanguageProvider lang={lang}>
           <Shell>{children}</Shell>
         </LanguageProvider>
         <script
           dangerouslySetInnerHTML={{
-            __html: `requestAnimationFrame(function(){document.querySelectorAll('.reveal').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0){getComputedStyle(el).opacity;el.classList.add('is-visible')}})})`,
+            __html: `requestAnimationFrame(function(){var els=document.querySelectorAll('.reveal'),v=[],i,r;for(i=0;i<els.length;i++){r=els[i].getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0)v.push(els[i])}if(v.length){getComputedStyle(v[0]).opacity;for(i=0;i<v.length;i++)v[i].classList.add('is-visible')}})`,
           }}
         />
       </body>
