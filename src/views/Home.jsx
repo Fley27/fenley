@@ -15,15 +15,15 @@ export default function Home() {
       <section className="hero">
         <div className="glow glow-hero" aria-hidden="true" />
         <div className="container">
-          <p className="kicker reveal">{home.hero.eyebrow}</p>
-          <h1 className="display reveal">
+          <p className="kicker reveal" suppressHydrationWarning>{home.hero.eyebrow}</p>
+          <h1 className="display reveal" suppressHydrationWarning>
             {home.hero.title1}
             <br />
             <span className="tone-2">{home.hero.title2}</span>
           </h1>
-          <p className="lead reveal">{home.hero.lead}</p>
+          <p className="lead reveal" suppressHydrationWarning>{home.hero.lead}</p>
 
-          <div className="hero-actions reveal">
+          <div className="hero-actions reveal" suppressHydrationWarning>
             <Link className="btn btn-primary btn-lg" to="/contact">
               {home.hero.cta1}
             </Link>
@@ -32,9 +32,9 @@ export default function Home() {
             </Link>
           </div>
 
-          <p className="hero-micro reveal">{home.hero.micro}</p>
+          <p className="hero-micro reveal" suppressHydrationWarning>{home.hero.micro}</p>
 
-          <div className="hero-stats reveal">
+          <div className="hero-stats reveal" suppressHydrationWarning>
             {home.hero.stats.map((stat) => (
               <div key={stat.l} className="stat">
                 <strong>{stat.v}</strong>
@@ -43,7 +43,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="hero-frame reveal">
+          <div className="hero-frame reveal" suppressHydrationWarning>
             <div className="frame-bar">
               <i />
               <i />
@@ -81,7 +81,7 @@ export default function Home() {
         <SectionHead kicker={home.story.kicker} title={home.story.title} lead={home.story.lead} align="center" />
         <div className="grid-3">
           {home.story.cards.map((card, index) => (
-            <article key={card.t} className="card reveal" style={{ '--delay': `${index * 90}ms` }}>
+            <article key={card.t} className="card reveal" suppressHydrationWarning style={{ '--delay': `${index * 90}ms` }}>
               <span className="card-index">0{index + 1}</span>
               <h3>{card.t}</h3>
               <p>{card.d}</p>
@@ -94,7 +94,7 @@ export default function Home() {
         <SectionHead kicker={home.services.kicker} title={home.services.title} lead={home.services.lead} />
         <div className="rows">
           {home.services.items.map((item) => (
-            <Link key={item.n} className="row reveal" to="/services">
+            <Link key={item.n} className="row reveal" suppressHydrationWarning to="/services">
               <span className="row-index">{item.n}</span>
               <div className="row-body">
                 <h3>{item.t}</h3>
@@ -106,7 +106,7 @@ export default function Home() {
             </Link>
           ))}
         </div>
-        <div className="section-foot reveal">
+        <div className="section-foot reveal" suppressHydrationWarning>
           <Link className="link-arrow" to="/services">
             {home.services.link} →
           </Link>
@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       <section className="section container">
-        <div className="band reveal">
+        <div className="band reveal" suppressHydrationWarning>
           <div className="glow glow-band" aria-hidden="true" />
           <div className="band-inner">
             <div className="band-head">
@@ -142,7 +142,7 @@ export default function Home() {
           <SectionHead kicker={home.work.kicker} title={home.work.title} lead={home.work.lead} />
           <div className="grid-3">
             {home.work.items.map((item, index) => (
-              <Link key={item.t} className="card card-link reveal" to="/work" style={{ '--delay': `${index * 90}ms` }}>
+              <Link key={item.t} className="card card-link reveal" suppressHydrationWarning to="/work" style={{ '--delay': `${index * 90}ms` }}>
                 <Mock kind={index === 1 ? 'phone' : index === 2 ? 'dash' : 'browser'} />
                 <span className="tag">{item.tag}</span>
                 <h3>{item.t}</h3>
@@ -150,7 +150,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <div className="section-foot reveal">
+          <div className="section-foot reveal" suppressHydrationWarning>
             <Link className="link-arrow" to="/work">
               {home.work.link} →
             </Link>
@@ -159,7 +159,7 @@ export default function Home() {
       )}
 
       <section className="langs-band">
-        <div className="container langs-inner reveal">
+        <div className="container langs-inner reveal" suppressHydrationWarning>
           <p className="kicker">{home.langs.kicker}</p>
           <h2 className="display display-md">{home.langs.title}</h2>
           <p className="lead">{home.langs.lead}</p>

@@ -22,7 +22,7 @@ export default function About() {
 
       <section className="section container">
         <div className="about-grid">
-          <div className="about-story reveal">
+          <div className="about-story reveal" suppressHydrationWarning>
             <figure className="about-portrait">
               <div className="portrait-stage">
                 {hasPhoto ? (
@@ -50,7 +50,7 @@ export default function About() {
               <p key={paragraph.slice(0, 24)}>{paragraph}</p>
             ))}
           </div>
-          <aside className="about-facts reveal">
+          <aside className="about-facts reveal" suppressHydrationWarning>
             {page.facts.map((fact) => (
               <div key={fact.l}>
                 <strong>{fact.v}</strong>
@@ -65,7 +65,7 @@ export default function About() {
         <SectionHead kicker={page.languages.kicker} title={page.languages.title} lead={page.languages.lead} align="center" />
         <div className="grid-3">
           {page.languages.items.map((item, index) => (
-            <article key={item.t} className="card card-lg reveal" style={{ '--delay': `${index * 90}ms` }}>
+            <article key={item.t} className="card card-lg reveal" suppressHydrationWarning style={{ '--delay': `${index * 90}ms` }}>
               <span className="card-index">0{index + 1}</span>
               <h3>{item.t}</h3>
               <p>{item.d}</p>
@@ -75,7 +75,7 @@ export default function About() {
       </section>
 
       <section className="section container">
-        <div className="band reveal">
+        <div className="band reveal" suppressHydrationWarning>
           <div className="glow glow-band" aria-hidden="true" />
           <div className="band-inner">
             <div className="band-head">
@@ -102,7 +102,7 @@ export default function About() {
         <SectionHead kicker={page.values.kicker} title={page.values.title} align="center" />
         <div className="grid-quad">
           {page.values.items.map((value, index) => (
-            <article key={value.t} className="card card-lg reveal" style={{ '--delay': `${index * 80}ms` }}>
+            <article key={value.t} className="card card-lg reveal" suppressHydrationWarning style={{ '--delay': `${index * 80}ms` }}>
               <span className="card-index">0{index + 1}</span>
               <h3>{value.t}</h3>
               <p>{value.d}</p>

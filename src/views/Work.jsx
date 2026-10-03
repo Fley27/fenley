@@ -17,7 +17,7 @@ export default function Work() {
         <section className="section container">
           <div className="projects">
             {page.projects.map((project, index) => (
-              <article key={project.n} className={`project reveal ${index % 2 === 1 ? 'is-flipped' : ''}`}>
+              <article key={project.n} className={`project reveal ${index % 2 === 1 ? 'is-flipped' : ''}`} suppressHydrationWarning>
                 <div className="project-visual">
                   <Mock kind={project.mock} />
                 </div>
@@ -31,7 +31,7 @@ export default function Work() {
               </article>
             ))}
           </div>
-          <p className="note note-center reveal">{page.note}</p>
+          <p className="note note-center reveal" suppressHydrationWarning>{page.note}</p>
         </section>
       )}
     </>

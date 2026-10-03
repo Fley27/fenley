@@ -44,7 +44,7 @@ export default function Contact() {
       <PageHero kicker={page.hero.kicker} title1={page.hero.title1} title2={page.hero.title2} lead={page.hero.lead} />
 
       <section className="section container contact-grid">
-        <div className="contact-main reveal">
+        <div className="contact-main reveal" suppressHydrationWarning>
           {sent ? (
             <div className="success">
               <span className="success-mark" aria-hidden="true">
@@ -130,7 +130,7 @@ export default function Contact() {
           <SectionHead kicker={page.steps.kicker} title={page.steps.title} />
           <ol className="next-steps">
             {page.steps.items.map((step) => (
-              <li key={step.n} className="reveal">
+              <li key={step.n} className="reveal" suppressHydrationWarning>
                 <span>{step.n}</span>
                 <div>
                   <strong>{step.t}</strong>
@@ -140,7 +140,7 @@ export default function Contact() {
             ))}
           </ol>
 
-          <div className="direct reveal">
+          <div className="direct reveal" suppressHydrationWarning>
             <p className="kicker">{page.direct.kicker}</p>
             <h3>{page.direct.title}</h3>
             <a className="direct-line" href={`mailto:${EMAIL}`}>

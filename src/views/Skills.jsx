@@ -14,7 +14,7 @@ export default function Skills() {
         <SectionHead kicker={page.list.kicker} title={page.list.title} lead={page.list.lead} />
         <div className="rows rows-detail">
           {page.items.map((item, index) => (
-            <article key={item.n} className="row reveal" style={{ '--delay': `${index * 60}ms` }}>
+            <article key={item.n} className="row reveal" suppressHydrationWarning style={{ '--delay': `${index * 60}ms` }}>
               <span className="row-index">{item.n}</span>
               <div className="row-body">
                 <h3>{item.t}</h3>

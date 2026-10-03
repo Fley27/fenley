@@ -28,8 +28,8 @@ export function PageHero({ kicker, title1, title2, lead, children }) {
     <section className="page-hero">
       <div className="glow glow-hero" aria-hidden="true" />
       <div className="container">
-        <p className="kicker reveal">{kicker}</p>
-        <h1 className="display reveal" data-dust-clear="">
+        <p className="kicker reveal" suppressHydrationWarning>{kicker}</p>
+        <h1 className="display reveal" suppressHydrationWarning data-dust-clear="">
           {title1}
           {title2 ? (
             <>
@@ -39,7 +39,7 @@ export function PageHero({ kicker, title1, title2, lead, children }) {
           ) : null}
         </h1>
         {lead ? (
-          <p className="lead reveal" data-dust-clear="">
+          <p className="lead reveal" suppressHydrationWarning data-dust-clear="">
             {lead}
           </p>
         ) : null}
@@ -54,7 +54,7 @@ export function CTABand() {
   return (
     <section className="cta-band">
       <div className="glow glow-cta" aria-hidden="true" />
-      <div className="container cta-inner reveal">
+      <div className="container cta-inner reveal" suppressHydrationWarning>
         <p className="kicker">{copy.cta.kicker}</p>
         <h2 className="display display-md" data-dust-clear="">
           {copy.cta.title}
@@ -77,7 +77,7 @@ export function CTABand() {
 
 export function SectionHead({ kicker, title, lead, align = 'left' }) {
   return (
-    <div className={`section-head section-head-${align} reveal`}>
+    <div className={`section-head section-head-${align} reveal`} suppressHydrationWarning>
       <p className="kicker">{kicker}</p>
       <h2 className="display display-md" data-dust-clear="">
         {title}

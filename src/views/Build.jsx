@@ -13,7 +13,7 @@ export default function Build() {
       <section className="section container">
         <div className="grid-quad">
           {page.principles.map((point, index) => (
-            <article key={point.t} className="card card-lg reveal" style={{ '--delay': `${index * 80}ms` }}>
+            <article key={point.t} className="card card-lg reveal" suppressHydrationWarning style={{ '--delay': `${index * 80}ms` }}>
               <span className="card-index">0{index + 1}</span>
               <h3>{point.t}</h3>
               <p>{point.d}</p>
@@ -23,7 +23,7 @@ export default function Build() {
       </section>
 
       <section className="section container">
-        <div className="band band-center reveal">
+        <div className="band band-center reveal" suppressHydrationWarning>
           <div className="glow glow-band" aria-hidden="true" />
           <div className="band-inner">
             <h2 className="display display-md" data-dust-clear="">
